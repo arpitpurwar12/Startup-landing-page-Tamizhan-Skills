@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -185,7 +186,7 @@
     .reviews h2 span {
         color: orange;
     }
-    @media screen and (max-width:412px){
+    @media screen and (max-width:600px){
       header video.bg-video{
         width: 470px;
     height: 250px;
@@ -299,3 +300,609 @@
 </body>
 
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Startup Landing Page</title>
+  <meta name="description" content="A modern, colorful landing page for startups to attract and engage users.">
+  <meta name="keywords" content="startup, landing page, responsive, modern, web design">
+  <meta name="author" content="RISE Internship">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --bg-gradient: linear-gradient(to bottom right, #FFDEE9, #B5FFFC);
+      --primary-color: #ee0979;
+      --secondary-color: #ff6a00;
+      --card-bg: linear-gradient(145deg, #e2f0cb, #fef9d7);
+      --hover-bg: #fff5e1;
+      --dark-bg: #1a1a1a;
+      --dark-text: #f0f0f0;
+      --dark-card-bg: #2a2a2a;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      transition: background 0.3s, color 0.3s;
+    }
+    body {
+      line-height: 1.6;
+      background: var(--bg-gradient);
+      color: #333;
+    }
+    body.dark {
+      background: var(--dark-bg);
+      color: var(--dark-text);
+    }
+    header {
+      background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
+      color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+      position: relative;
+    }
+    header video.bg-video {
+      top: 0;
+      left: 0;
+      width: 900px;
+      height: 300px;
+      object-fit: cover;
+      z-index: -1;
+      opacity: 1;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      margin-top: 20px;
+      background: #fff;
+      color: var(--primary-color);
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+    .btn:hover {
+      background: var(--primary-color);
+      color: #fff;
+      transform: scale(1.05);
+    }
+    .toggle-theme {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+      background: #fff;
+      border: none;
+      padding: 10px;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    .toggle-theme i {
+      font-size: 20px;
+      color: var(--primary-color);
+    }
+    section {
+      padding: 60px 20px;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.9);
+      margin: 20px 0;
+      border-radius: 10px;
+    }
+    body.dark section {
+      background: rgba(40, 40, 40, 0.9);
+    }
+    .services,
+    .testimonials,
+    .reviews,
+    .features,
+    .team {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .card {
+      background: var(--card-bg);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+      width: 300px;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      background: var(--hover-bg);
+      transform: translateY(-10px);
+    }
+    body.dark .card {
+      background: var(--dark-card-bg);
+      color: var(--dark-text);
+    }
+    .star-rating {
+      color: #f5b50a;
+      font-size: 18px;
+      margin: 10px 0;
+    }
+    .features .card i,
+    .team .card i {
+      font-size: 30px;
+      margin-bottom: 10px;
+      color: var(--primary-color);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    input,
+    textarea {
+      padding: 10px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    input:focus,
+    textarea:focus {
+      border-color: var(--primary-color);
+      outline: none;
+    }
+    body.dark input,
+    body.dark textarea {
+      background: #444;
+      color: var(--dark-text);
+      border-color: #666;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      color: #fff;
+    }
+    .social-icons {
+      margin-top: 10px;
+    }
+    .social-icons a {
+      margin: 0 10px;
+      color: #fff;
+      font-size: 20px;
+      transition: color 0.3s;
+    }
+    .social-icons a:hover {
+      color: var(--primary-color);
+    }
+    .reviews h2 span {
+        color: orange;
+    }
+    @media screen and (max-width:600px){
+      header video.bg-video{
+        width: 470px;
+    height: 250px;
+      }
+      
+    }
+  </style>
+</head>
+
+<body>
+  <button class="toggle-theme" onclick="document.body.classList.toggle('dark')">
+    <i class="fas fa-adjust"></i>
+  </button>
+
+  <header>
+    <video autoplay muted loop class="bg-video">
+      <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
+    </video>
+    <h1>Welcome to Our Startup</h1>
+    <p>We build innovative solutions for modern businesses.</p>
+    <a href="#contact" class="btn">Get Started</a>
+  </header>
+
+  <section class="features">
+    <h2>Our Features</h2>
+    <div class="card">
+      <i class="fas fa-bolt"></i>
+      <h3>Fast & Reliable</h3>
+      <p>Lightning-fast solutions tailored for your needs.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-shield-alt"></i>
+      <h3>Secure Platform</h3>
+      <p>Industry-leading security and privacy features.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-rocket"></i>
+      <h3>Scalable</h3>
+      <p>Grow your business with a scalable infrastructure.</p>
+    </div>
+  </section>
+
+  <section class="team">
+    <h2>Meet Our Team</h2>
+    <div class="card">
+      <i class="fas fa-user-tie"></i>
+      <h3>Arpit Purwar</h3>
+      <p>Frontend Developer passionate about clean UI and interactivity.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-user-cog"></i>
+      <h3>Anjali Rao</h3>
+      <p>Backend Engineer ensuring speed and scalability.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-user-astronaut"></i>
+      <h3>Rohan Mehta</h3>
+      <p>UI/UX Designer crafting user-centric digital experiences.</p>
+    </div>
+  </section>
+
+  <section class="reviews">
+    <h2>What Our <span>Customers</span> <br>Say</h2>
+    <div class="card">
+      <p>“This startup completely transformed our workflow. Amazing service and support!”</p>
+      <div class="star-rating">★★★★★</div>
+      <strong>- Priya Sharma</strong>
+    </div>
+    <div class="card">
+      <p>“I loved the design and the user-friendly interface. Highly recommended.”</p>
+      <div class="star-rating">★★★★★</div>
+      <strong>- Arjun Mehta</strong>
+    </div>
+    <div class="card">
+      <p>“Great experience from start to finish. Our team is more productive now.”</p>
+      <div class="star-rating">★★★★☆</div>
+      <strong>- Nisha Verma</strong>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Startup Landing Page - Arpit Purwar. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('section').forEach(section => observer.observe(section));
+  </script>
+</body>
+
+</html>
+>>>>>>> 434168a4ed0f06529af880736be7f5d5b90bc34d
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Startup Landing Page</title>
+  <meta name="description" content="A modern, colorful landing page for startups to attract and engage users.">
+  <meta name="keywords" content="startup, landing page, responsive, modern, web design">
+  <meta name="author" content="RISE Internship">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --bg-gradient: linear-gradient(to bottom right, #FFDEE9, #B5FFFC);
+      --primary-color: #ee0979;
+      --secondary-color: #ff6a00;
+      --card-bg: linear-gradient(145deg, #e2f0cb, #fef9d7);
+      --hover-bg: #fff5e1;
+      --dark-bg: #1a1a1a;
+      --dark-text: #f0f0f0;
+      --dark-card-bg: #2a2a2a;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      transition: background 0.3s, color 0.3s;
+    }
+    body {
+      line-height: 1.6;
+      background: var(--bg-gradient);
+      color: #333;
+    }
+    body.dark {
+      background: var(--dark-bg);
+      color: var(--dark-text);
+    }
+    header {
+      background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
+      color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+      position: relative;
+    }
+    header video.bg-video {
+      top: 0;
+      left: 0;
+      width: 900px;
+      height: 300px;
+      object-fit: cover;
+      z-index: -1;
+      opacity: 1;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      margin-top: 20px;
+      background: #fff;
+      color: var(--primary-color);
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+    .btn:hover {
+      background: var(--primary-color);
+      color: #fff;
+      transform: scale(1.05);
+    }
+    .toggle-theme {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+      background: #fff;
+      border: none;
+      padding: 10px;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    .toggle-theme i {
+      font-size: 20px;
+      color: var(--primary-color);
+    }
+    section {
+      padding: 60px 20px;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.9);
+      margin: 20px 0;
+      border-radius: 10px;
+    }
+    body.dark section {
+      background: rgba(40, 40, 40, 0.9);
+    }
+    .services,
+    .testimonials,
+    .reviews,
+    .features,
+    .team {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .card {
+      background: var(--card-bg);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+      width: 300px;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      background: var(--hover-bg);
+      transform: translateY(-10px);
+    }
+    body.dark .card {
+      background: var(--dark-card-bg);
+      color: var(--dark-text);
+    }
+    .star-rating {
+      color: #f5b50a;
+      font-size: 18px;
+      margin: 10px 0;
+    }
+    .features .card i,
+    .team .card i {
+      font-size: 30px;
+      margin-bottom: 10px;
+      color: var(--primary-color);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    input,
+    textarea {
+      padding: 10px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    input:focus,
+    textarea:focus {
+      border-color: var(--primary-color);
+      outline: none;
+    }
+    body.dark input,
+    body.dark textarea {
+      background: #444;
+      color: var(--dark-text);
+      border-color: #666;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      color: #fff;
+    }
+    .social-icons {
+      margin-top: 10px;
+    }
+    .social-icons a {
+      margin: 0 10px;
+      color: #fff;
+      font-size: 20px;
+      transition: color 0.3s;
+    }
+    .social-icons a:hover {
+      color: var(--primary-color);
+    }
+    .reviews h2 span {
+        color: orange;
+    }
+    @media screen and (max-width:600px){
+      header video.bg-video{
+        width: 470px;
+    height: 250px;
+      }
+      
+    }
+  </style>
+</head>
+
+<body>
+  <button class="toggle-theme" onclick="document.body.classList.toggle('dark')">
+    <i class="fas fa-adjust"></i>
+  </button>
+
+  <header>
+    <video autoplay muted loop class="bg-video">
+      <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
+    </video>
+    <h1>Welcome to Our Startup</h1>
+    <p>We build innovative solutions for modern businesses.</p>
+    <a href="#contact" class="btn">Get Started</a>
+  </header>
+
+  <section class="features">
+    <h2>Our Features</h2>
+    <div class="card">
+      <i class="fas fa-bolt"></i>
+      <h3>Fast & Reliable</h3>
+      <p>Lightning-fast solutions tailored for your needs.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-shield-alt"></i>
+      <h3>Secure Platform</h3>
+      <p>Industry-leading security and privacy features.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-rocket"></i>
+      <h3>Scalable</h3>
+      <p>Grow your business with a scalable infrastructure.</p>
+    </div>
+  </section>
+
+  <section class="team">
+    <h2>Meet Our Team</h2>
+    <div class="card">
+      <i class="fas fa-user-tie"></i>
+      <h3>Arpit Purwar</h3>
+      <p>Frontend Developer passionate about clean UI and interactivity.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-user-cog"></i>
+      <h3>Anjali Rao</h3>
+      <p>Backend Engineer ensuring speed and scalability.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-user-astronaut"></i>
+      <h3>Rohan Mehta</h3>
+      <p>UI/UX Designer crafting user-centric digital experiences.</p>
+    </div>
+  </section>
+
+  <section class="reviews">
+    <h2>What Our <span>Customers</span> <br>Say</h2>
+    <div class="card">
+      <p>“This startup completely transformed our workflow. Amazing service and support!”</p>
+      <div class="star-rating">★★★★★</div>
+      <strong>- Priya Sharma</strong>
+    </div>
+    <div class="card">
+      <p>“I loved the design and the user-friendly interface. Highly recommended.”</p>
+      <div class="star-rating">★★★★★</div>
+      <strong>- Arjun Mehta</strong>
+    </div>
+    <div class="card">
+      <p>“Great experience from start to finish. Our team is more productive now.”</p>
+      <div class="star-rating">★★★★☆</div>
+      <strong>- Nisha Verma</strong>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Startup Landing Page - Arpit Purwar. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('section').forEach(section => observer.observe(section));
+  </script>
+</body>
+
+</html>
+>>>>>>> 96b565c5dadd0fe9db35418cec70a11abbd93997
